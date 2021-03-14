@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskTacking.Controllers.AuthorController">
+   <children>
+      <Pane layoutX="708.0" prefHeight="768.0" prefWidth="643.0" style="-fx-background-color: #2e2e3e;">
+         <children>
+            <ImageView fitHeight="633.0" fitWidth="899.0" layoutX="-126.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/frame_00001.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <BorderPane prefHeight="774.0" prefWidth="1024.0" visible="false" />
+      <ImageView fitHeight="381.0" fitWidth="386.0" layoutX="536.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/profile.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="194.0" text="Author &amp; Commands">
+         <font>
+            <Font name="Comic Sans MS Bold" size="54.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="262.0" text="นาย ศวิล บุญมา">
+         <font>
+            <Font name="Comic Sans MS Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="276.0" layoutY="329.0" prefHeight="67.0" prefWidth="269.0" text="ชื่อเล่น กาย ">
+         <font>
+            <Font name="Comic Sans MS Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="396.0" text="ID 6210402500">
+         <font>
+            <Font name="Comic Sans MS Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="91.0" fitWidth="181.0" layoutX="86.0" layoutY="494.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/BackButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="144.0" fitWidth="287.0" layoutX="250.0" layoutY="468.0" onMouseClicked="#handleCommands" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/CommandsButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

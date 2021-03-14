@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1350.0" style="-fx-background-color: #2e2e3e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskTacking.Controllers.CommandsController">
+   <children>
+      <BorderPane prefHeight="768.0" prefWidth="1280.0">
+         <top>
+            <Pane prefHeight="99.0" prefWidth="1280.0" style="-fx-background-color: #2e2e3e;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="485.0" layoutY="4.0" text="Commands" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="64.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backButton" fitHeight="57.0" fitWidth="203.0" layoutX="14.0" layoutY="28.0" onMouseClicked="#handleBack" opacity="0.8" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@Image/BackButton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="57.0" fitWidth="203.0" layoutX="1216.0" layoutY="28.0" onMouseClicked="#handleHome" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/HomeButton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane fx:id="choicePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="addingPane" layoutX="-1.0" layoutY="-1.0" onMouseClicked="#handleAdding" onMouseEntered="#enterAdding" opacity="0.5" prefHeight="683.0" prefWidth="450.0" style="-fx-background-color: #2e2e3e;">
+                     <children>
+                        <ImageView fitHeight="408.0" fitWidth="426.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/AddIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="100.0" layoutY="363.0" text="Adding" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane fx:id="editPane" layoutX="450.0" layoutY="-1.0" onMouseClicked="#handleEdit" onMouseEntered="#enterEdit" opacity="0.5" prefHeight="683.0" prefWidth="450.0" style="-fx-background-color: #2e2e3e;">
+                     <children>
+                        <ImageView fitHeight="408.0" fitWidth="426.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/EditRemove.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="16.0" layoutY="363.0" text="Edit&amp;Remove" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane fx:id="filterPane" layoutX="900.0" layoutY="-1.0" onMouseClicked="#handleFilter" onMouseEntered="#enterFilter" opacity="0.5" prefHeight="683.0" prefWidth="450.0" style="-fx-background-color: #2e2e3e;">
+                     <children>
+                        <ImageView fitHeight="408.0" fitWidth="426.0" onMouseClicked="#handleFilter" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Magnifying.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="39.0" layoutY="363.0" text="Filter&amp;Sort" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane fx:id="addingShowPane" prefHeight="669.0" prefWidth="1350.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Adding Task" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="89.0" text="First click a add task button" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="94.0" fitWidth="274.0" layoutX="351.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/AddTaskButton.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="539.0" layoutY="89.0" text="Then a pop-up will show. " textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="280.0" fitWidth="350.0" layoutX="15.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Adding.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="16.0" layoutY="157.0" text="Second fullfill your task information" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="485.0" text="then click add button." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1050.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+                        <Separator layoutX="442.0" layoutY="157.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="7.0" style="-fx-background-color: #2e2e3e;" />
+                        <Label layoutX="463.0" layoutY="157.0" text="Last one you will get your task in tableview." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="372.0" fitWidth="580.0" layoutX="463.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Added.JPG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="443.0" fitWidth="667.0" layoutX="939.0" layoutY="124.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/AddIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="15.0" layoutY="149.0" prefHeight="7.0" prefWidth="834.0" style="-fx-background-color: #2e2e3e;" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="editShowPane" prefHeight="669.0" prefWidth="1350.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Edit &amp; Remove Task" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1050.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="13.0" layoutY="65.0" text="Edit" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="104.0" text="First you must select a task in tableview" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="56.0" fitWidth="502.0" layoutX="14.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/EditRemoveSelect.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="195.0" text="Then a info of selected task will show " textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="427.0" fitWidth="445.0" layoutX="14.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/EditInfo.JPG" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="251.0" layoutY="236.0" prefHeight="427.0" prefWidth="539.0" style="-fx-background-color: #2e2e3e;">
+                           <children>
+                              <ImageView fitHeight="89.0" fitWidth="152.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/processButton.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="166.0" layoutY="40.0" text="You can make you task processing here." textFill="WHITE">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="86.0" fitWidth="172.0" layoutX="-6.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/DoneButton.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="166.0" layoutY="123.0" text="You can make you task done here." textFill="WHITE">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="89.0" fitWidth="152.0" layoutX="14.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/EditButton.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="166.0" layoutY="201.0" text="You can edit you task info hehe." textFill="WHITE">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="268.0" text="And after you edit your task , press upload button" textFill="WHITE">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="89.0" fitWidth="152.0" layoutX="25.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Image/UploadButton.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="177.0" layoutY="338.0" text="to upload your edited task ." textFill="WHITE">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Separator layoutX="503.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="238.0" prefWidth="7.0" style="-fx-background-color: #2e2e3e;" />
+                        <Label layoutX="521.0" layoutY="14.0" text="Remove" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="521.0" layoutY="67.0" text="After selecting task in tableview " textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="521.0" layoutY="101.0" text="a remove button will append" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="521.0" layoutY="137.0" text="in a bottom of table view" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="270.0" fitWidth="487.0" layoutX="820.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Remove.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="818.0" layoutY="450.0" text="Then click a remove button " textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="818.0" layoutY="485.0" text="if you decide to remove you task ." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="818.0" layoutY="520.0" text="And after your task will gone forever." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="filterShowPane" layoutX="10.0" layoutY="10.0" prefHeight="669.0" prefWidth="1350.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Filter &amp; Sorting" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1050.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="13.0" layoutY="65.0" text="Filter" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="104.0" text="First click filter button " textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="75.0" fitWidth="192.0" layoutX="345.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/filter.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="13.0" layoutY="245.0" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="154.0" text="a filter page will show." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="426.0" fitWidth="243.0" layoutX="14.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/Filter.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="231.0" layoutY="206.0" text="you can change filter by" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="231.0" layoutY="245.0" text="select at bottom left box." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="615.0" orientation="VERTICAL" prefHeight="670.0" prefWidth="8.0" style="-fx-background-color: #2e2e3e;" />
+                        <Label layoutX="638.0" layoutY="20.0" text="Sorting" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="638.0" layoutY="67.0" text="You can sorting your task bt priority" textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="641.0" layoutY="106.0" text="by clicking at a priority bar." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="216.0" fitWidth="249.0" layoutX="641.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/sortHtoL.JPG" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="216.0" fitWidth="249.0" layoutX="1017.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/sortLtoH.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="638.0" layoutY="406.0" text="Sorting High to Low." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="999.0" layoutY="406.0" text="Sorting Low to High." textFill="#2e2e3e">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
